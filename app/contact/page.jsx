@@ -4,9 +4,7 @@ const ContactPage = () => {
   return (
     <>
       <div className={styles.header}>
-        <p className={styles.headerText}>
-          Welcome to The Sudhanshublog!!!
-        </p>
+        <p className={styles.headerText}>Welcome to The Sudhanshublog!!!</p>
       </div>
       <div className={styles.container}>
         <h5 className={styles.title}>Contact Us</h5>

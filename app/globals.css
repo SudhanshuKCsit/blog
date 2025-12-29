@@ -77,10 +77,15 @@ a {
   }
 }
 
-.ql-container{
-  font-size: 28px !important;
+.ProseMirror {
+  font-size: 28px;
 }
 
-.quill > .ql-container > .ql-editor.ql-blank::before{
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
   color: #b3b3b1;
+  float: left;
+  height: 0;
+  pointer-events: none;
 }
+
