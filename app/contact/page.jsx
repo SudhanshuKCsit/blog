@@ -9,7 +9,7 @@ const ContactPage = () => {
         </p>
       </div>
       <div className={styles.container}>
-        <h2 className={styles.title}>Contact Us</h2>
+        <h5 className={styles.title}>Contact Us</h5>
         <p className={styles.subtitle}>
           Got an issue? Want to send feedback? Need details about our courses?
           Let us know.
