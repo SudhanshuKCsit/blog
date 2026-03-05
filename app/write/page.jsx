@@ -3,30 +3,12 @@
 import { useState } from "react";
 import styles from "./writePage.module.css";
 import Image from "next/image";
-import { useEditor, EditorContent } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
-import Placeholder from "@tiptap/extension-placeholder";
 
 const WritePage = () => {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("style");
-
-  const editor = useEditor({
-    extensions: [
-      StarterKit,
-      Placeholder.configure({
-        placeholder: "Tell your story...",
-      }),
-    ],
-    content: "",
-    immediatelyRender: false,
-    editorProps: {
-      attributes: {
-        class: styles.textArea,
-      },
-    },
-  });
+  const [content, setContent] = useState("");
 
   return (
     <div className={styles.container}>
@@ -37,6 +19,7 @@ const WritePage = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
+
       <select
         className={styles.select}
         value={category}
@@ -49,10 +32,12 @@ const WritePage = () => {
         <option value="travel">Travel</option>
         <option value="coding">Coding</option>
       </select>
+
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
           <Image src="/plus.png" alt="" width={16} height={16} />
         </button>
+
         {open && (
           <div className={styles.add}>
             <button className={styles.addButton}>
@@ -66,7 +51,13 @@ const WritePage = () => {
             </button>
           </div>
         )}
-        <EditorContent editor={editor} />
+
+        <textarea
+          placeholder="Tell your story..."
+          className={styles.textArea}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        />
       </div>
 
       <button className={styles.publish}>Publish</button>

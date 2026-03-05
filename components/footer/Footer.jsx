@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={styles.info}>
         <div className={styles.logo}>
           <Image src="/logo.png" alt="lama blog" width={50} height={50} />
-          <h1 className={styles.logoText}>The Sudhanshublog..</h1>
+          <h1 className={styles.logoText}>Trend Chronicle</h1>
         </div>
         <p className={styles.desc}>
           A modern blogging platform where writers connect, ideas grow, and
