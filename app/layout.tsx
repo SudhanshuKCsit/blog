@@ -8,8 +8,8 @@ import ThemeProvider from '@/providers/ThemeProvider'
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
-    default: "Tech Blog | Amplied-Tech",
-    template: "%s | Tech Blog",
+    default: "Trend Chronicle",
+    template: "%s | Trend Chronicle",
   },
   description: "A modern tech blog.",
 };
